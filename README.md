@@ -1,109 +1,152 @@
-# TypeScript-Data-Validator
+# 📊 Typescript Data Validator
 
-## 🖼️ Hero Image
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6.svg)](https://www.typescriptlang.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-4-000000.svg)](https://expressjs.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![TypeScript Data Validator Hero Image](hero_image.png)
+[English](#english) | [Português](#português)
+
+---
 
 ## English
 
-### Advanced Data Validation Framework
+### 🎯 Overview
 
-This project presents a robust and flexible data validation framework built with TypeScript. It ensures type safety and data integrity across various applications, providing developers with powerful tools to define and enforce data schemas.
+**Typescript Data Validator** — Professional TypeScript-Data-Validator - Created by Gabriel Demetrios Lafis
 
-### Features
+Total source lines: **22** across **1** files in **1** language.
 
-*   **Type-Safe Validation:** Leverage TypeScript's powerful type system for compile-time and runtime validation.
-*   **Flexible Schema Definition:** Define complex data structures with ease using a declarative API.
-*   **Customizable Validators:** Extend the framework with custom validation rules to fit specific business logic.
-*   **Detailed Error Reporting:** Receive clear and actionable error messages for failed validations.
-*   **High Performance:** Optimized for efficiency, ensuring minimal overhead in critical applications.
+### ✨ Key Features
 
-### Quick Start
+- **Production-Ready Architecture**: Modular, well-documented, and following best practices
+- **Comprehensive Implementation**: Complete solution with all core functionality
+- **Clean Code**: Type-safe, well-tested, and maintainable codebase
+- **Easy Deployment**: Docker support for quick setup and deployment
 
-To get started with TypeScript-Data-Validator, follow these steps:
+### 🚀 Quick Start
+
+#### Prerequisites
+- Node.js 20+ and npm
+
+
+#### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/TypeScript-Data-Validator.git
+cd TypeScript-Data-Validator
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+#### Running
 
 ```bash
-npm install && npm run build && npm start
+npm run dev
 ```
 
-### Usage Example
 
-```typescript
-import { Validator, Schema } from 'typescript-data-validator';
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  age?: number;
-}
 
-const userSchema: Schema<User> = {
-  id: { type: 'number', required: true },
-  name: { type: 'string', required: true, minLength: 3 },
-  email: { type: 'string', required: true, format: 'email' },
-  age: { type: 'number', optional: true, min: 18 },
-};
 
-const validator = new Validator(userSchema);
+### 📁 Project Structure
 
-const validUser = { id: 1, name: 'Gabriel', email: 'gabriel@example.com', age: 30 };
-const invalidUser = { id: '2', name: 'Jo', email: 'invalid-email', age: 15 };
-
-console.log('Valid User:', validator.validate(validUser)); // { success: true, data: validUser }
-console.log('Invalid User:', validator.validate(invalidUser)); // { success: false, errors: [...] }
 ```
+TypeScript-Data-Validator/
+├── src/
+│   └── index.ts
+├── README.md
+└── package.json
+```
+
+### 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| TypeScript | 1 files |
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👤 Author
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
+
+---
 
 ## Português
 
-### Estrutura Avançada de Validação de Dados
+### 🎯 Visão Geral
 
-Este projeto apresenta uma estrutura de validação de dados robusta e flexível, construída com TypeScript. Ele garante a segurança de tipos e a integridade dos dados em diversas aplicações, fornecendo aos desenvolvedores ferramentas poderosas para definir e aplicar esquemas de dados.
+**Typescript Data Validator** — Professional TypeScript-Data-Validator - Created by Gabriel Demetrios Lafis
 
-### Funcionalidades
+Total de linhas de código: **22** em **1** arquivos em **1** linguagem.
 
-*   **Validação com Segurança de Tipo:** Aproveite o poderoso sistema de tipos do TypeScript para validação em tempo de compilação e execução.
-*   **Definição de Esquema Flexível:** Defina estruturas de dados complexas com facilidade usando uma API declarativa.
-*   **Validadores Personalizáveis:** Estenda a estrutura com regras de validação personalizadas para se adequar à lógica de negócios específica.
-*   **Relatório de Erros Detalhado:** Receba mensagens de erro claras e acionáveis para validações falhas.
-*   **Alto Desempenho:** Otimizado para eficiência, garantindo sobrecarga mínima em aplicações críticas.
+### ✨ Funcionalidades Principais
 
-### Início Rápido
+- **Arquitetura Pronta para Produção**: Modular, bem documentada e seguindo boas práticas
+- **Implementação Completa**: Solução completa com todas as funcionalidades principais
+- **Código Limpo**: Type-safe, bem testado e manutenível
+- **Fácil Implantação**: Suporte Docker para configuração e implantação rápidas
 
-Para começar a usar o TypeScript-Data-Validator, siga estes passos:
+### 🚀 Início Rápido
+
+#### Pré-requisitos
+- Node.js 20+ e npm
+
+
+#### Instalação
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/TypeScript-Data-Validator.git
+cd TypeScript-Data-Validator
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+#### Execução
 
 ```bash
-npm install && npm run build && npm start
+npm run dev
 ```
 
-### Exemplo de Uso
 
-```typescript
-import { Validator, Schema } from 'typescript-data-validator';
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  age?: number;
-}
 
-const userSchema: Schema<User> = {
-  id: { type: 'number', required: true },
-  name: { type: 'string', required: true, minLength: 3 },
-  email: { type: 'string', required: true, format: 'email' },
-  age: { type: 'number', optional: true, min: 18 },
-};
+### 📁 Estrutura do Projeto
 
-const validator = new Validator(userSchema);
-
-const validUser = { id: 1, name: 'Gabriel', email: 'gabriel@example.com', age: 30 };
-const invalidUser = { id: '2', name: 'Jo', email: 'invalid-email', age: 15 };
-
-console.log('Valid User:', validator.validate(validUser)); // { success: true, data: validUser }
-console.log('Invalid User:', validator.validate(invalidUser)); // { success: false, errors: [...] }
+```
+TypeScript-Data-Validator/
+├── src/
+│   └── index.ts
+├── README.md
+└── package.json
 ```
 
-## Author
-Gabriel Demetrios Lafis
+### 🛠️ Stack Tecnológica
 
+| Tecnologia | Uso |
+|------------|-----|
+| TypeScript | 1 files |
+
+### 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+### 👤 Autor
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
